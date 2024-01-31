@@ -35,7 +35,7 @@ class Canister:
             setattr(self, name, CaniterMethod(agent, canister_id, name, method.argTypes, method.retTypes, anno))
             setattr(self, name + '_async', CaniterMethodAsync(agent, canister_id, name, method.argTypes, method.retTypes, anno))
 
-class CaniterMethod:
+class CanisterMethod:
     def __init__(self, agent, canister_id, name, args, rets, anno = None):
         self.agent = agent
         self.canister_id = canister_id
